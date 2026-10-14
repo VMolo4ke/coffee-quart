@@ -1,26 +1,32 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Переменные для базовых цветов бренда (мягкий крафтовый стиль) */
+  --bg-creamy: #fbf9f6;       /* Мягкий кремовый фон всего сайта (stone-50/amber-50) */
+  --text-main: #292524;       /* Глубокий кофейно-графитовый для текста (stone-800) */
+  --coffee-accent: #854d0e;   /* Насыщенный кофейный для кнопок и акцентов (amber-800) */
+  --coffee-hover: #713f12;    /* Темно-кофейный для ховеров (amber-900) */
+  --card-bg: #ffffff;         /* Белый для карточек товаров и формы */
+  --border-color: #e7e5e4;    /* Приглушенный серый для границ карточек (stone-200) */
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --color-background: var(--bg-creamy);
+  --color-foreground: var(--text-main);
+  
+  --color-coffee: var(--coffee-accent);
+  --color-coffee-hover: var(--coffee-hover);
+  --color-card: var(--card-bg);
+  --color-card-border: var(--border-color);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-sans: var(--font-geist-sans), Arial, sans-serif;
+  --font-mono: var(--font-geist-mono), monospace;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg-creamy);
+  color: var(--text-main);
+  font-family: var(--font-sans);
+  min-height: 100vh;
+  margin: 0;
 }
