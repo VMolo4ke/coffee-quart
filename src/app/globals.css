@@ -1,16 +1,16 @@
 @import "tailwindcss";
 
 :root {
-  /* Переменные для базовых цветов бренда (мягкий крафтовый стиль) */
-  --bg-creamy: #fbf9f6;       /* Мягкий кремовый фон всего сайта (stone-50/amber-50) */
-  --text-main: #292524;       /* Глубокий кофейно-графитовый для текста (stone-800) */
-  --coffee-accent: #854d0e;   /* Насыщенный кофейный для кнопок и акцентов (amber-800) */
-  --coffee-hover: #713f12;    /* Темно-кофейный для ховеров (amber-900) */
-  --card-bg: #ffffff;         /* Белый для карточек товаров и формы */
-  --border-color: #e7e5e4;    /* Приглушенный серый для границ карточек (stone-200) */
+  --bg-creamy: #fbf9f6;
+  --text-main: #292524;
+  --coffee-accent: #854d0e;
+  --coffee-hover: #713f12;
+  --card-bg: #ffffff;
+  --border-color: #e7e5e4;
 }
 
-@theme inline {
+@theme {
+  /* В Tailwind v4 мы связываем имя свойства с переменной из :root */
   --color-background: var(--bg-creamy);
   --color-foreground: var(--text-main);
   
@@ -20,13 +20,17 @@
   --color-card-border: var(--border-color);
 
   --font-sans: var(--font-geist-sans), Arial, sans-serif;
-  --font-mono: var(--font-geist-mono), monospace;
+  --font-serif: Georgia, Cambria, serif;
 }
 
 body {
-  background: var(--bg-creamy);
+  background-color: var(--bg-creamy);
   color: var(--text-main);
   font-family: var(--font-sans);
   min-height: 100vh;
   margin: 0;
+}
+
+section + section {
+  margin-top: 120px;
 }
