@@ -9,7 +9,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative bg-background px-4 pt-20 pb-16 md:pt-28 md:pb-24 border-b border-card-border">
+    <section className="relative bg-background px-4 pt-20 md:pt-28 border-card-border">
       <div className="absolute top-4 right-4 md:block opacity-10 select-none pointer-events-none transform rotate-12 font-mono text-xs border-2 border-stone-950 p-2 uppercase tracking-widest text-right">
         Кварта Минск<br />
         Лот: 2019-2026<br />
